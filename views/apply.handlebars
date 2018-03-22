@@ -12,7 +12,7 @@
 <!-- About us heading end-->
 
 <div class="container margin-t50" style="margin-bottom: 50px">
-    <form class="needs-validation is_formed" novalidate method="post" action="/route/apply" enctype="multipart/form-data">
+    <form class="needs-validation is_formed" novalidate method="post" action="/route/apply">
         {{#if error_msg}}
             <div class="alert alert-warning" role="alert">
                 {{error_msg}}
@@ -25,15 +25,15 @@
         {{/if}}
         <div class="form-row">
             <div class="col-md-12 mb-3">
-                <label for="fname">First name</label>
-                <input type="text" class="form-control" id="fname" name="firstname" placeholder="First name" required>
+                <label for="fullname">Full Name</label>
+                <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Fullname" required>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
             </div>
             <div class="col-md-12 mb-3">
-                <label for="lname">Last name</label>
-                <input type="text" class="form-control" id="lname" name="lastname" placeholder="Last name" required>
+                <label for="nationality">Nationality</label>
+                <input type="text" class="form-control" id="nationality" name="nationality" placeholder="Nationality" required>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
@@ -46,8 +46,18 @@
                 </div>
             </div>
             <div class="col-md-12 mb-3">
-                <label for="cv">CV</label>
-                <input type="file" class="form-control-file form-control" name="cv" id="cv" required>
+                <label for="phone">Phone</label>
+                <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <label for="phone">Gender</label>
+                <select class="form-control" required name="gender"> 
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
                 <div class="valid-feedback">
                     Looks good!
                 </div>

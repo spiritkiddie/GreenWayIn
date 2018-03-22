@@ -19,7 +19,7 @@ const route = require('./routes/route');
 const app = express();
 
 //initialising Database
-//require('./config/db');
+require('./config/db');
 
 //setting up port
 const port = process.env.PORT || 3004;

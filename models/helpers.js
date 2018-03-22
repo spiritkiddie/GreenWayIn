@@ -1,12 +1,14 @@
-module.exports.checkFileType = function(file, callback) {
-    let extention = file.originalname.split('.').pop();
-    let fileType = /jpeg|jpg|png|pdf/;
-    let extName = fileType.test(extention.toLowerCase());
-    let mimeType = fileType.test(file.mimeType);
 
-    if ( extName || mimeType  ) {
-        return callback(null, true);
-    } else {
-        return callback('Please! Upload Only Images with ( .jpeg, .jpg, .png , .pdf)');
-    }
+const mongoose = require('mongoose');
+
+const Data = require('../models/model');
+
+
+module.exports.checkUserExit = function (email, callback) {
+    let query = { Email: email };
+    Data.findOne(query, callback);
+}
+
+module.exports.addUser = function (newUser, callback) {
+    newUser.save(callback);
 }

@@ -1,5 +1,5 @@
 module.exports =  {
-    database: 'mongodb://localhost:27017/getway',
+    database: 'mongodb://localhost:27017/Greenway',
     secretKey: 'GetWay-a4f8071f-c873-4447-8ee2', 
     SMTP_HOST_USERNAME: 'career@greenwavetelecom.com',
     SMTP_HOST_PASSWORD: 'careeremail',
